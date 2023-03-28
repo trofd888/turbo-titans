@@ -1,0 +1,130 @@
+import random
+import time
+count = 0
+
+# generate a random number between 1 and 10
+number1 = random.randint(1, 9)
+number2 = random.randint(1, 9)
+number3 = random.randint(1, 9)
+number4 = random.randint(1, 9)
+
+
+print("<|How To Play|>")
+print('|type a number next to the "|HACK|>" icon.')
+print('|the arrows ">>>>>" or "<<<<<" mean higher or lower.| ')
+print("|if you guess the number correct you will go to the next digits.|")
+print("|guess all four digits to hack the password and win.|")
+print("|good luck!|")
+print("")
+
+
+
+# keep looping until the user guesses the number
+while True:
+    # ask the user to guess the number
+    guess1 = input("|HACK|> ")
+    count += 1
+    # convert the user's guess to an integer
+    guess1 = int(guess1)
+
+    # check if the guess is correct
+    if guess1 == number1:
+        print(number1,"***")
+        # generate a new random number for the user to guess
+
+        # keep looping until the user guesses the number
+        while True:
+            # ask the user to guess the number
+            guess2 = input("|HACK|> ")
+            count += 1
+
+            # convert the user's guess to an integer
+            guess2 = int(guess2)
+
+            # check if the guess is correct
+            if guess2 == number2:
+                print(number1,number2,"**")
+
+
+                while True:
+                    # ask the user to guess the number
+                    guess3 = input("|HACK|> ")
+                    count += 1
+
+                    # convert the user's guess to an integer
+                    guess3 = int(guess3)
+
+                    # check if the guess is correct
+                    if guess3 == number3:
+                        print(number1,number2,number3,"*")
+                        # generate a new random number for the user to guess
+                        while True:
+                            # ask the user to guess the number
+                            guess4 = input("|HACK|> ")
+                            count += 1
+
+                            # convert the user's guess to an integer
+                            guess4 = int(guess4)
+
+                            # check if the guess is correct
+                            if guess4 == number4:
+                                print(number1,number2,number3,number4)
+                                print("<Password cracked>")
+                                print("the hack took",count, "guesses")
+
+                                print()
+                                print("|press enter when done|")
+                                print()
+                                done = input("|HACK|> ")
+                                while True:
+                                    print("01110010 01100001 01101110 01100100 01101111 01101101 01100101 00100000 01100011 01101111 01100100 01100101")
+                                    print("password cracked")
+
+
+
+                                # generate a new random number for the user to guess
+
+                            else:
+                                # if the guess is incorrect, ask the user to guess again
+                                print("ERROR")
+                                print(number1,number2,number3,"*")
+                                if guess4 > number4:
+                                    print("<<<<<")
+
+                                else:
+                                    print(">>>>>")
+                        # generate a new random number for the user to guess
+
+
+                    else:
+                        # if the guess is incorrect, ask the user to guess again
+                        print("ERROR")
+                        print(number1,number2,"**")
+                        if guess3 > number3:
+                            print("<<<<<")
+
+                        else:
+                            print(">>>>>")
+                # generate a new random number for the user to guess
+
+            else:
+                # if the guess is incorrect, ask the user to guess again
+                print("ERROR")
+                print(number1,"***")
+                if guess2 > number2:
+                    print("<<<<<")
+
+                else:
+                    print(">>>>>")
+
+    else:
+        # if the guess is incorrect, ask the user to guess again
+
+        print("ERROR")
+        print("****")
+
+        if guess1 > number1:
+            print("<<<<<")
+
+        else: print(">>>>>")
+
