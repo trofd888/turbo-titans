@@ -12,6 +12,12 @@ display = pygame.display.set_mode((800, 700))
 
 pygame.display.set_caption("My racing game")
 
+clock = pygame.time.Clock()
+
+frame_count = 0
+frame_rate = 60
+start_time = 90
+
 carimg = pygame.image.load("C:/Users/m.lee/PycharmProjects/python Car racing game/Assets/car1.png")
 
 backgroundleft = pygame.image.load("C:/Users/m.lee/PycharmProjects/python Car racing game/Assets/left.png")
@@ -20,6 +26,8 @@ backgroundright = pygame.image.load("C:/Users/m.lee/PycharmProjects/python Car r
 
 car_width = 23
 car_height = 47
+
+
 
 
 def policecar(police_startx, police_starty, police):
