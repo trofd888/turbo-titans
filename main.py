@@ -1,12 +1,13 @@
+####################
+# Import libraries #
+####################
 import random
 import time
 import pygame
 
+
+# Run PyGame
 pygame.init()
-
-gray = (60, 60, 60)
-
-black = (255, 0, 0)
 
 display = pygame.display.set_mode((800, 700))
 
@@ -86,7 +87,6 @@ def loop():
     y = 540
 
     x_change = 0
-    y_change = 0
 
     policecar_speed = 8
     police = 0
@@ -110,10 +110,10 @@ def loop():
             if event.type == pygame.KEYDOWN:
 
                 if event.key == pygame.K_LEFT:
-                    x_change = - 2
+                    x_change = - 3
 
                 if event.key == pygame.K_RIGHT:
-                    x_change = 2
+                    x_change = 3
 
             elif event.type == pygame.KEYUP:
                 x_change = 0
