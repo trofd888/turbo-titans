@@ -1,3 +1,6 @@
+####################
+# Import libraries #
+####################
 import random
 import time
 import pygame
@@ -6,6 +9,7 @@ pygame.init()
 
 gray = (60, 60, 60)
 
+# Run PyGame
 black = (255, 0, 0)
 
 display = pygame.display.set_mode((800, 700))
